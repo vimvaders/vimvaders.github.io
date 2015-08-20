@@ -1,8 +1,6 @@
 # Site settings
 title: vimvaders
 email: "&lt;teamname&gt;@gmail.com"
-description: Vimvaders Team
-baseurl: ""
 url: "http://vimvaders.github.io"
 github_username:  vimvaders
 
