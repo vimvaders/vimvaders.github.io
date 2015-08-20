@@ -1,0 +1,11 @@
+:not(.highlight) > pre {
+    white-space: pre-wrap;
+}
+
+article img, table {
+    margin: auto;
+}
+
+article img {
+    display: block;
+}
