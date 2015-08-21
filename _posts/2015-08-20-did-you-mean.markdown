@@ -10,7 +10,7 @@ date: 2015-08-20 19:00:00
 >
 > Description: *Pwnie*
 
-The challenge provides us with the file [`pwnie`]({{ site.url }}/assets/hackcon2015/pwnie) and an ip and address for a webservice.
+The task provides us with the file [`pwnie`]({{ site.url }}/assets/hackcon2015/pwnie) and an ip and address for a webservice.
 
     $ file pwnie
     pwnie: ELF 64-bit LSB  executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.24, BuildID[sha1]=b87bef02278df740b6c0011e989f39b08ccfc998, not stripped

@@ -10,7 +10,7 @@ date: 2015-08-20 20:00:00
 >
 > Description: *Get your flag [here]({{ site.url }}/assets/hackcon2015/ilovebugs.pyc).*
 
-The challenge comes with the file [ilovebugs.pyc]({{ site.url }}/assets/hackcon2015/ilovebugs.pyc) which is a compiled python file. We can decompile it using the [`uncompyle2`](https://pypi.python.org/pypi/uncompyle2) package.
+The task comes with the file [ilovebugs.pyc]({{ site.url }}/assets/hackcon2015/ilovebugs.pyc) which is a compiled python file. We can decompile it using the [`uncompyle2`](https://pypi.python.org/pypi/uncompyle2) package.
 
     $ uncompyle2 --py -o . ilovebugs.pyc
     +++ okay decompyling ilovebugs.pyc

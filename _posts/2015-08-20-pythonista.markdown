@@ -10,7 +10,7 @@ date: 2015-08-20 21:00:00
 >
 > Description: *The program apparently once could print more than stories.*
 
-The challenge comes with two files:
+The task comes with two files:
 
 - [`hide.pyo`]({{ site.url }}/assets/hackcon2015/hide.pyo)
 - [`message.txt`]({{ site.url }}/assets/hackcon2015/message.txt)

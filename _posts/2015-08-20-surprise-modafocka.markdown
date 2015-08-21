@@ -10,7 +10,7 @@ date: 2015-08-20 18:00:00
 >
 > Description: *[Surprise Surprise]({{ site.url }}/assets/hackcon2015/surprise_muthafuka.jpg)*
 
-The mission comes with the file [surprise_muthafuka.jpg]({{ site.url }}/assets/hackcon2015/surprise_muthafuka.jpg). The extension indicates that this is an image, but when we open it:
+The task comes with the file [surprise_muthafuka.jpg]({{ site.url }}/assets/hackcon2015/surprise_muthafuka.jpg). The extension indicates that this is an image, but when we open it:
 
 ![image open error]({{ site.url }}/assets/hackcon2015/image-open-error.png)
 

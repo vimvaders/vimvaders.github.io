@@ -21,7 +21,7 @@ These commands are grouped in five blocks separated by empty lines. The last lin
 
     Can you digest the message?
 
-The name of the challenge and the kind of commands made us think about the python [`turtle`](https://docs.python.org/2/library/turtle.html) library:
+The name of the task and the kind of commands made us think about the python [`turtle`](https://docs.python.org/2/library/turtle.html) library:
 
 > Turtle graphics is a popular way for introducing programming to kids. It was part of the original Logo programming language developed by Wally Feurzig and Seymour Papert in 1966.
 >
@@ -63,7 +63,7 @@ The resulting shapes compose the word `SLASH`:
 
 <img src="{{ site.url }}/assets/hackcon2015/ninja1.png" alt="ninja-1" style="width: 80px;"/> | <img src="{{ site.url }}/assets/hackcon2015/ninja2.png" alt="ninja-2" style="width: 80px;"/> | <img src="{{ site.url }}/assets/hackcon2015/ninja3.png" alt="ninja-3" style="width: 80px;"/> | <img src="{{ site.url }}/assets/hackcon2015/ninja4.png" alt="ninja-4" style="width: 80px;"/> | <img src="{{ site.url }}/assets/hackcon2015/ninja5.png" alt="ninja-5" style="width: 80px;"/>
 
-The final line of the challenge reads `Can you digest the message?` so the flag is obtained by applying the [*MD5 message-digest*](https://en.wikipedia.org/wiki/MD5) algorithm on `SLASH`, resulting in:
+The final line of the task is `Can you digest the message?` so the flag can be obtained by applying the [*MD5 message-digest*](https://en.wikipedia.org/wiki/MD5) algorithm on `SLASH`, resulting in:
 
     646da671ca01bb5d84dbb5fb2238dc8e
 

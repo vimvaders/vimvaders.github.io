@@ -10,7 +10,7 @@ date: 2015-08-20 11:00:00
 >
 > Description: *The flag is in the form of two words separated by an underscore.*
 
-The challenge comes with the file [and_so_on.exe]({{ site.url }}/assets/hackcon2015/and_so_on.exe). As always we first check if the extension is correct:
+The task comes with the file [and_so_on.exe]({{ site.url }}/assets/hackcon2015/and_so_on.exe). As always we first check if the extension is correct:
 
     $ file and_so_on.exe
     and_so_on.exe: PE32 executable for MS Windows (console) Intel 80386 32-bit
@@ -124,7 +124,7 @@ After some time investing on the result, we thought that's it's quite interestin
 
 ![Pi digits distribution]({{ site.url }}/assets/hackcon2015/Pi_digits_distribution.svg)
 
-Remembering that the description of the challenge was: `The flag is in the form of two words separated by an underscore`, the flag is:
+Remembering that the description of the task was: `The flag is in the form of two words separated by an underscore`, the flag is:
 
     feynman_point
 
