@@ -3,6 +3,7 @@ layout: post
 title:  "Hackcon 2015: Making Love To Bugs"
 categories: CATEGORY
 tags: pwn
+date: 2015-08-20 20:00:00
 ---
 
 > Category: *pwnage* - Points: *25*

@@ -3,6 +3,7 @@ layout: post
 title:  "Hackcon 2015: Pythonista"
 categories: hackcon2015
 tags: pwnage
+date: 2015-08-20 21:00:00
 ---
 
 > Category: *pwnage* - Points: *25*

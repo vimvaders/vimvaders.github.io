@@ -3,6 +3,7 @@ layout: post
 title:  "Hackcon 2015: Surprise, Modafocka"
 categories: hackcon2015
 tags: misc
+date: 2015-08-20 18:00:00
 ---
 
 > Category: *misc* - Points: *75*

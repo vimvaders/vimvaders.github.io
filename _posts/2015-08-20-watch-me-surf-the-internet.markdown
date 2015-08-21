@@ -3,6 +3,7 @@ layout: post
 title:  "Hackcon2015: Watch Me Surf The Internet"
 categories: hackcon2015
 tags: forensics
+date: 2015-08-20 15:00:00
 ---
 
 > Category: *forensics* - Points: *100*
