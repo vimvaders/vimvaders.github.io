@@ -3,6 +3,7 @@ layout: post
 title:  "Hackcon 2015: And So On"
 categories: hackcon2015
 tags: binary
+date: 2015-08-20 11:00:00
 ---
 
 > Category: *binary* - Points: *75*

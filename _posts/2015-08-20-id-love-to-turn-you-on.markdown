@@ -3,6 +3,7 @@ layout: post
 title:  "Hackcon 2015: I'd love to turn you on"
 categories: hackcon2015
 tags: crypto
+date: 2015-08-20 13:00:00
 ---
 
 > Category: *crypto* - Points: *100*

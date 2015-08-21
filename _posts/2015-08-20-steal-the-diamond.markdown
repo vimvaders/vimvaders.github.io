@@ -3,6 +3,7 @@ layout: post
 title:  "Hackcon 2015: Steal the Diamond"
 categories: hackcon2015
 tags: crypto
+date: 2015-08-20 14:00:00
 ---
 
 > Category: *crypto* - Points: *25*
