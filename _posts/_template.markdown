@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "TITLE"
-categories: CATEGORY CATEGORY2
-tags: TAG1 TAG2
+title:  ""
+categories: 
+tags: 
 date: YYYY-MM-DD HH:MM:SS
 ---
 
