@@ -3,6 +3,7 @@ title: vimvaders
 email: "&lt;teamname&gt;@gmail.com"
 url: "http://vimvaders.github.io"
 github_username:  vimvaders
+twitter_username: vimvaders
 
 # Build settings
 markdown: kramdown
