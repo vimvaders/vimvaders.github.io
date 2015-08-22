@@ -61,7 +61,7 @@ with open('ninjaturtles.txt') as data:
 
 The resulting shapes compose the word `SLASH`:
 
-<img src="{{ site.url }}/assets/hackcon2015/ninja1.png" alt="ninja-1" style="width: 80px;"/> | <img src="{{ site.url }}/assets/hackcon2015/ninja2.png" alt="ninja-2" style="width: 80px;"/> | <img src="{{ site.url }}/assets/hackcon2015/ninja3.png" alt="ninja-3" style="width: 80px;"/> | <img src="{{ site.url }}/assets/hackcon2015/ninja4.png" alt="ninja-4" style="width: 80px;"/> | <img src="{{ site.url }}/assets/hackcon2015/ninja5.png" alt="ninja-5" style="width: 80px;"/>
+![ninja]({{ site.url }}/assets/hackcon2015/ninja.png)
 
 The final line of the task is `Can you digest the message?` so the flag can be obtained by applying the [*MD5 message-digest*](https://en.wikipedia.org/wiki/MD5) algorithm on `SLASH`, resulting in:
 
