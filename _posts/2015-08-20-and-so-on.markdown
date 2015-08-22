@@ -122,7 +122,7 @@ Let's try it:
 
 After some time investing on the result, we thought that's it's quite interesting that in the first 1000 digits of $$ \pi $$ there are five 9's in a row. Actually this is a [famous sequence](http://www.google.com/search?hl=en&q=pi%2099999&btnG=Google+Search&aq=f&oq=) known as [Feynman Point](https://en.wikipedia.org/wiki/Feynman_point):
 
-![Pi digits distribution]({{ site.url }}/assets/hackcon2015/Pi_digits_distribution.svg)
+![Pi digits distribution]({{ site.url }}/assets/hackcon2015/Pi_digits_distribution.png)
 
 Remembering that the description of the task was: `The flag is in the form of two words separated by an underscore`, the flag is:
 
