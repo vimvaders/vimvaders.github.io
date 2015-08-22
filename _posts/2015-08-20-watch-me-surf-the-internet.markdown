@@ -2,7 +2,7 @@
 layout: post
 title:  "Hackcon2015: Watch Me Surf The Internet"
 categories: hackcon2015
-tags: forensics
+tags: ctf forensics
 date: 2015-08-20 15:00:00
 ---
 

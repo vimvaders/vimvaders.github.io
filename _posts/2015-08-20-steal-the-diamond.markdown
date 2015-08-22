@@ -2,7 +2,7 @@
 layout: post
 title:  "Hackcon 2015: Steal the Diamond"
 categories: hackcon2015
-tags: crypto
+tags: ctf crypto
 date: 2015-08-20 14:00:00
 ---
 

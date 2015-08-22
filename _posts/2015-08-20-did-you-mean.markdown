@@ -2,7 +2,7 @@
 layout: post
 title:  "Hackcon 2015: Did you mean"
 categories: hackcon2015
-tags: pwn
+tags: ctf pwn
 date: 2015-08-20 19:00:00
 ---
 

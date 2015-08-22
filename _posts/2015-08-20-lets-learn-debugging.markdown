@@ -2,7 +2,7 @@
 layout: post
 title:  "Hackcon 2015: Let's Learn Debugging"
 categories: hackcon2015
-tags: binary
+tags: ctf binary
 date: 2015-08-20 12:00:00
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "Hackcon 2015: Surprise, Modafocka"
 categories: hackcon2015
-tags: misc
+tags: ctf misc
 date: 2015-08-20 18:00:00
 ---
 
