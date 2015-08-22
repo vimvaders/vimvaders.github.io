@@ -6,7 +6,7 @@ tags: binary
 date: 2015-08-20 12:00:00
 ---
 
-> Category: *Binary* - Points: *75*
+> Category: *binary* - Points: *75*
 >
 > Description: *The program apparently once could print more than stories.*
 

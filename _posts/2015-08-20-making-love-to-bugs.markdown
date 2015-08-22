@@ -6,7 +6,7 @@ tags: pwn
 date: 2015-08-20 20:00:00
 ---
 
-> Category: *pwnage* - Points: *25*
+> Category: *pwn* - Points: *25*
 >
 > Description: *Get your flag [here]({{ site.url }}/assets/hackcon2015/ilovebugs.pyc).*
 

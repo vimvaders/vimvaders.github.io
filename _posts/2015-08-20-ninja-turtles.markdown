@@ -6,7 +6,7 @@ tags: misc
 date: 2015-08-20 17:00:00
 ---
 
-> Category: *Misc* - Points: *25*
+> Category: *misc* - Points: *25*
 >
 > Description: *Ninja Turtles*
 

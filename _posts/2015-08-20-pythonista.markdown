@@ -2,11 +2,11 @@
 layout: post
 title:  "Hackcon 2015: Pythonista"
 categories: hackcon2015
-tags: pwnage
+tags: pwn
 date: 2015-08-20 21:00:00
 ---
 
-> Category: *pwnage* - Points: *25*
+> Category: *pwn* - Points: *25*
 >
 > Description: *The program apparently once could print more than stories.*
 
