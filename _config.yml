@@ -7,3 +7,6 @@ twitter_username: vimvaders
 
 # Build settings
 markdown: kramdown
+
+gems:
+  - jekyll-sitemap
