@@ -10,7 +10,7 @@ tags: ctf exploitation python
 > Category: *exploitation* - Points: *100*
 >
 > Description: *Daniel is running this server which allows you to evaluate basic python expressions. It's clear that he's tried to secure it though. Can you see if you can get it to print the flag?
-> You can access it by running nc vuln2015.icec.tf 8000.*
+> You can access it by running* `nc vuln2015.icec.tf 8000` *.*
 >
 > Hint: *Even if some keywords are banned, is that gonna stop you?*
 
