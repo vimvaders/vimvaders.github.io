@@ -1,0 +1,103 @@
+---
+layout: post
+title:  "IceCTF 2015: PyShell"
+categories: icectf2015
+tags: ctf exploitation python
+---
+
+![icectf]({{ site.url }}/assets/icectf2015/icectf.png)
+
+> Category: *exploitation* - Points: *100*
+>
+> Description: *Daniel is running this server which allows you to evaluate basic python expressions. It's clear that he's tried to secure it though. Can you see if you can get it to print the flag?
+> You can access it by running nc vuln2015.icec.tf 8000.*
+>
+> Hint: *Even if some keywords are banned, is that gonna stop you?*
+
+The task comes with the file [`shell.py`]({{ site.url }}/assets/icectf2015/shell.py) which is the source code of the webservice available at the specified location. The source is the following:
+
+{% highlight python %}
+#!/usr/bin/env python
+
+from __future__ import print_function
+import sys
+
+print("Welcome to my Python sandbox! Enter commands below! Please don't mess up my server though :/")
+sys.stdout.flush()
+
+banned = [
+    "import",
+    "exec",
+    "eval",
+    "pickle",
+    "os",
+    "subprocess",
+    "input",
+    "banned",
+    "sys"
+]
+
+targets = __builtins__.__dict__.keys()
+targets.remove('raw_input')
+targets.remove('print')
+for x in targets:
+    del __builtins__.__dict__[x]
+
+while 1:
+    print(">>>", end=' ')
+    sys.stdout.flush()
+    data = raw_input()
+
+    for no in banned:
+        if no.lower() in data.lower():
+            print("No bueno")
+            break
+    else:
+        exec data
+{% endhighlight %}
+
+So we are provided with a shell and the user input is checked not to contain one of the *banned* words before being passed to the [`exec`](https://docs.python.org/2/reference/simple_stmts.html#exec) function which dynamically execute the code.
+
+In order to increase the shell security, every element but `print` and `raw_input` is removed from the [`__builtins__`](https://docs.python.org/2/reference/executionmodel.html) dictionary which contains the common functions.
+
+## Background
+
+This reminds us the *CSAW2014* problem [*pybabbies*](https://github.com/ctfs/write-ups-2014/tree/master/csaw-ctf-2014/pybabbies) and its solutions can be adapted to this task. There are a few write-ups for that task, but we can groups them in two categories:
+
+* obtain a reference to the [`file`](https://docs.python.org/2/library/functions.html#file) function and guess the filename for the flag;
+* obtain a reference to the [`os`](https://docs.python.org/2/library/os.html) module in order to use the [`os.system`](https://docs.python.org/2/library/os.html#os.system) function and be able to issue commands to the underlying system.
+
+The second way is more interesting, but even if the methods used to gain the reference to the `os` module are really interesting, they are quite complicated such as [this](https://hexplo.it/escaping-the-csawctf-python-sandbox/) and [this](http://sugarstack.io/csaw-2014-pybabbies.html). Most of them are based on `linecache`, contained in `warnings.catch_warnings`, which contains a reference to `os` united with some techniques explained in [this](http://nedbatchelder.com/blog/201206/eval_really_is_dangerous.html) amazing Ned Batchelder's post.
+
+## Another solution
+
+We found a more straight-forward solution for this task. Since in this case the [`sys`](https://docs.python.org/2/library/sys.html) module is already loaded, we can use [`sys.modules`](https://docs.python.org/2/library/sys.html#sys.modules) to get the references of all the loaded modules (including `os`).
+
+The problem here is that `sys` is a banned word. We want to clear the `banned` variable, without being able to use its name. It would be great if there was a dictionary containing all the globals, so that we can compose the name of the variable with string operations like `'ban' + 'ned'` and evade the blacklist.
+
+The dictionary that contains the global variables can be accessed with the function [`globals()`](https://docs.python.org/2/library/functions.html#globals), but unfortunately we don't have access to that variable since the built-ins were cleared.
+
+We can access the same dictionary defining a `function` object (for example using a `lambda`) and accessing its `__globals__` variable. This way we will be able to set the `banned` variable to an empty list, disabling the blacklist:
+
+{% highlight python %}
+>>> (lambda: 1).__globals__['ban' + 'ned'] = []
+{% endhighlight %}
+
+Now we don't have a blacklist anymore, so we can easily get a reference to `os`:
+
+{% highlight python %}
+>>> os = sys.modules['os']
+{% endhighlight %}
+
+Now we can list the files in the directory and print the flag:
+
+{% highlight python %}
+>>> os.system('ls')
+flag.txt
+problem
+problem.py
+>>> os.system('cat ./flag.txt')
+The flag is: not_your_average_python
+{% endhighlight %}
+
+So the flag is `not_your_average_python`.
