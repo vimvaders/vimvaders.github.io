@@ -9,3 +9,7 @@ article img, table {
 article img {
     display: block;
 }
+
+article blockquote {
+    word-wrap: break-word;
+}
