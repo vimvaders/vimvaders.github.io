@@ -1,0 +1,102 @@
+---
+layout: post
+title:  "Layer7 2015: Login"
+categories: layer7-2015
+tags: ctf web
+---
+
+> Category: *web* - Points: *50*
+>
+> Description: *http://prob.layer7.kr/login/index.php*
+
+The address in the description points to a login form. The page also provides us the PHP code behind the login form:
+
+{% highlight php %}
+<?php
+   define("FNAME", basename(__FILE__));
+   define("PATH", dirname(__FILE__) . "/");
+
+   include_once(dirname(__FILE__) . "/config.php");
+   function filter($username){
+
+      if(preg_match("/[A-Z][a-z][0-9].*/", $username)){
+         $auth = true;
+      }else{
+         $auth = false;
+      }
+
+      return $auth;
+   }
+   function challenge($username, $password){
+      global $flag;
+      if(isset($username)){
+         if(isset($password)){
+            if(!filter($username)) return "Filter it";
+            $rand_val = "abcdefghijklmnopqrstuvwxyz0123456789";
+            $passwd = '';
+            for($j = 0; $j < 2; $j++){
+               for($i = 0; $i < 31337; $i++){
+                  $passwd[$j] .= $rand_val[rand(0, strlen($rand_val) - 1)];
+               }
+            }
+            $database = array(
+               "Layer7" => $passwd[0],
+               "Admin0" => $passwd[1],
+            );
+            if($database[$username] != $password){
+               return $passwd[0];
+            }
+            return sprintf("flag is %s", $flag);
+         }else{
+            return "Input Password";
+         }
+      }else{
+        highlight_file(PATH . 'index.php');
+        return "Input Username";
+      }
+   }
+   echo '<form method=post><input type=text name=username><input type=password name=password><input type=submit value=Login></form>';
+   printf("<br>Message : %s!", challenge($_POST['username'], $_POST['password']));
+?>
+{% endhighlight %}
+
+## Analysis
+
+Each time the php is run a new array `$database` is created storing the passwords of the two users: `Layer7` and `Admin0`. However, the password are composed by 31337 random characters, which makes the login page impossible to bruteforce or guess. If the password does not match, the password for the user `Layer7` is printed, but since it will be regenerated the next time, this information is useless.
+
+Next we noted that the username is validated using the `filter` function, allowing only usernames which satisfy the following regex:
+
+    [A-Z][a-z][0-9].*
+
+Since `Layer7` and `Admin0` do not satisfy the regular expression, they are not even usable in the login form, so we have to look for something else.
+
+When the `$username` is not in the `$database` array, `$database[$username]` returns a `NULL` value. Moreover, this value is compared to the `$password` using the PHP *loose comparison* (PHP uses [*loose comparison*][php-loose] with `==` and `!=`, while it uses [*strict comparison*][php-strict] with `===` and `!==`).
+
+The PHP loose comparison operator has a really strange behavior. This is its truth table:
+
+![php loose comparison]({{ site.url }}/assets/layer7-2015/loose.png)
+
+The highlighted row is used when one of the two operands is `NULL`. Since we want the result to be *true*, we need the password to be either `FALSE`, `0`, `NULL`, `ARRAY` or `""`. So we can just provide an empty password and the comparison should be verified, giving the flag in return.
+
+### Exploit
+
+We have to provide an username which verifies the `filter` function (such as `Aa0`) and an empty password, which is different from not providing the `password` field at all (otherwise the `isset` would return false and the message `Input Password` would be displayed). We can use different tools to POST the needed data to the webpage. The easiest way is to use `wget`:
+
+    wget -qO- http://prob.layer7.kr/login/index.php --post-data='username=Aa0&password='
+
+This gives the following output:
+
+    <form method=post><input type=text name=username><input type=password name=password><input type=submit value=Login></form><br>Message : flag is a52a12ec82efd713433b16aea3f32cae!
+
+So the flag is: `a52a12ec82efd713433b16aea3f32cae`
+
+### How to improve the code?
+
+The problem here is that *loose comparison* tries to compare different types. The code could be improved using *strict comparison*, which has the following truth table:
+
+![php strict comparison]({{ site.url }}/assets/layer7-2015/strict.png)
+
+Since we have no way to pass a `NULL` parameter through a form, that would have prevented the exploit.
+
+[php-loose]: http://php.net/manual/en/types.comparisons.php#types.comparisions-loose
+[php-strict]: http://php.net/manual/en/types.comparisons.php#types.comparisions-strict
