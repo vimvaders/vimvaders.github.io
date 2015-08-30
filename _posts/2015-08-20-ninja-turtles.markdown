@@ -29,7 +29,7 @@ The name of the task and the kind of commands made us think about the python [`t
 >
 > By combining together these and similar commands, intricate shapes and pictures can easily be drawn.
 
-The idea is to interpret the lines into turtle commands in order to draw the shapes. The blocks represents different shapes, so at the end of each block we will make our script pause so that the shape can be identified. We wrote a python utility to interpret the commands:
+The idea is to interpret the lines into turtle commands in order to draw the shapes. The blocks represent different shapes, so at the end of each block we will make our script pause so that the shape can be identified. We wrote a python utility to interpret the commands:
 
 [**ninjaturtles.py**]({{ site.url }}/assets/hackcon2015/ninjaturtles.py)
 

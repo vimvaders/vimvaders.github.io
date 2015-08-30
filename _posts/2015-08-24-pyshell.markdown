@@ -71,9 +71,9 @@ The second way is more interesting, but even if the methods used to gain the ref
 
 ## Another solution
 
-We found a more straight-forward solution for this task. Since in this case the [`sys`](https://docs.python.org/2/library/sys.html) module is already loaded, we can use [`sys.modules`](https://docs.python.org/2/library/sys.html#sys.modules) to get the references of all the loaded modules (including `os`).
+We found a more straightforward solution for this task. Since in this case the [`sys`](https://docs.python.org/2/library/sys.html) module is already loaded, we can use [`sys.modules`](https://docs.python.org/2/library/sys.html#sys.modules) to get the references of all the loaded modules (including `os`).
 
-The problem here is that `sys` is a banned word. We want to clear the `banned` variable, without being able to use its name. It would be great if there was a dictionary containing all the globals, so that we can compose the name of the variable with string operations like `'ban' + 'ned'` and evade the blacklist.
+The problem here is that `sys` is a banned word. We want to clear the `banned` variable, without being able to use its name. It would be great if there was a dictionary containing all the globals so that we can compose the name of the variable with string operations like `'ban' + 'ned'` and evade the blacklist.
 
 The dictionary that contains the global variables can be accessed with the function [`globals()`](https://docs.python.org/2/library/functions.html#globals), but unfortunately we don't have access to that variable since the built-ins were cleared.
 

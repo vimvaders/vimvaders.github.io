@@ -122,7 +122,7 @@ char getme10() {
 }
 {% endhighlight %}
 
-By the way if we compile and execute the resulting code we get the following output:
+By the way, if we compile and execute the resulting code we get the following output:
 
     $ gcc output.c -o output
     $ ./output

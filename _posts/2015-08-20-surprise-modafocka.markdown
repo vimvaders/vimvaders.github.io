@@ -29,7 +29,7 @@ There is a `password.jpg` file. The name seems promising, but when we open it:
 
 ![password.jpg file]({{ site.url }}/assets/hackcon2015/password.jpg)
 
-However, when we open the `password.jpg` file with an hex viewer, the content is more interesting.
+However, when we open the `password.jpg` file with a hex viewer, the content is more interesting.
 
 ![password.jpg hex]({{ site.url }}/assets/hackcon2015/password-hex.png)
 

@@ -29,7 +29,7 @@ As always we first blindly extract the HTTP files from the pcap.
 
 ![http objects extraction from Wireshark]({{ site.url }}/assets/hackcon2015/http-objects.png)
 
-There is only one resource, the page `byld.iiitd.edu.in`. We compared the extracted page with the online one but they resulted to be the same.
+There is only one resource, the page `byld.iiitd.edu.in`. We compared the extracted page with the online one, but they resulted in being the same.
 
 Then we started analyzing the other packets. There are a lot of HTTPS connections to google and facebook, so we thought about a crypto challenge.
 
@@ -37,7 +37,7 @@ Then we started analyzing the other packets. There are a lot of HTTPS connection
 
 But the organizers gave the hint:
 
-> Try not to get lost in SSL packets. The level doesn't expect you to read SSL packets in anyway.
+> Try not to get lost in SSL packets. The level doesn't expect you to read SSL packets in any way.
 
 At last we noted something strange. Multiple packets had some strange slightly-over-10000 source ports. Some of the ports were also duplicated.
 

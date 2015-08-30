@@ -97,5 +97,5 @@ The result is the following string: [`https://xkcd.com/936/`](https://xkcd.com/9
 
 ![password strength](http://imgs.xkcd.com/comics/password_strength.png)
 
-So we tried the super-famous `correcthorsebatterystaple` as flag but it didn't work. The other one was `Tr0ub4dor&3` and it worked, so this is our flag.
+So we tried the super-famous `correcthorsebatterystaple` as the flag but it didn't work. The other one was `Tr0ub4dor&3` and it worked, so this is our flag.
 
