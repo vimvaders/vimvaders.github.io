@@ -26,7 +26,7 @@ This is the first challenge and it is just a *sanity check*. From the descriptio
 
 ![Substitution Cipher]({{ site.url }}/assets/seccon2015/cipher_jefferson.jpg)
 
-We wrote the following python [script]({{ site.url }}/assets/seccon2015/start.py), using [`maketrans`](http://python.org) and [`translate`](http://python.org).
+We wrote the following python [script]({{ site.url }}/assets/seccon2015/start.py), using [`maketrans`](https://docs.python.org/2/library/string.html#string.maketrans) and [`translate`](https://docs.python.org/2/library/string.html#string.translate).
 
 {% highlight python %}
 #!/usr/bin/env python
