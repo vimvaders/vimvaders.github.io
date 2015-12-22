@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "A present for all the Star Wars fans"
+categories: nonsense
+tags: starwars
+date: 2015-12-22 12:00:00
+author: enrico
+---
+
+<img src="{{ site.url }}/assets/nonsense/vimvaders-starwars.png" title="vim-vaders" alt="vim-vaders">
