@@ -4,6 +4,7 @@ title:  "Hackcon 2015: Steal the Diamond"
 categories: hackcon2015
 tags: ctf crypto
 date: 2015-08-20 14:00:00
+author: enrico
 ---
 
 > Category: *crypto* - Points: *25*

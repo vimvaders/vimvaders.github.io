@@ -4,6 +4,7 @@ title:  "Hackcon 2015: I'd love to turn you on"
 categories: hackcon2015
 tags: ctf crypto
 date: 2015-08-20 13:00:00
+author: enrico
 ---
 
 > Category: *crypto* - Points: *100*

@@ -4,6 +4,7 @@ title:  "Seccon 2015: Last Challenge"
 categories: seccon2015
 tags: ctf misc
 date: 2015-12-09 20:00:00
+author: enrico
 ---
 
 > Category: *Misc* - Points: *50*

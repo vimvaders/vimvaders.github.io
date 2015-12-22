@@ -4,6 +4,7 @@ title:  "Hackcon 2015: Making Love To Bugs"
 categories: hackcon2015
 tags: ctf pwn
 date: 2015-08-20 20:00:00
+author: enrico
 ---
 
 > Category: *pwn* - Points: *25*

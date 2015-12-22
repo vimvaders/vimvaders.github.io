@@ -4,6 +4,7 @@ title:  ""
 categories: 
 tags: 
 date: YYYY-MM-DD HH:MM:SS
+author: 
 ---
 
 > Category: ** - Points: **

@@ -4,6 +4,7 @@ title:  "Hackcon 2015: Pythonista"
 categories: hackcon2015
 tags: ctf pwn
 date: 2015-08-20 21:00:00
+author: enrico
 ---
 
 > Category: *pwn* - Points: *25*

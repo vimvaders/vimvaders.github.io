@@ -4,6 +4,7 @@ title:  "Hackcon 2015: Frag Grenade"
 categories: hackcon2015
 tags: ctf misc
 date: 2015-08-20 16:00:00
+author: enrico
 ---
 
 > Category: *misc* - Points: *50*

@@ -3,6 +3,7 @@ layout: post
 title:  "IceCTF 2015: PyShell"
 categories: icectf2015
 tags: ctf exploitation python
+author: enrico
 ---
 
 ![icectf]({{ site.url }}/assets/icectf2015/icectf.png)

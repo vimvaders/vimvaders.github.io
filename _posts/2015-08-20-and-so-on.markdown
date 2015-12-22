@@ -4,6 +4,7 @@ title:  "Hackcon 2015: And So On"
 categories: hackcon2015
 tags: ctf binary
 date: 2015-08-20 11:00:00
+author: enrico
 ---
 
 > Category: *binary* - Points: *75*

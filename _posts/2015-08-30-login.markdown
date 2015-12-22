@@ -3,6 +3,7 @@ layout: post
 title:  "Layer7 2015: Login"
 categories: layer7-2015
 tags: ctf web
+author: enrico
 ---
 
 > Category: *web* - Points: *50*

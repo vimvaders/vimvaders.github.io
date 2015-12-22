@@ -4,6 +4,7 @@ title:  "Hackcon 2015: Doctor Doctor"
 categories: hackcon2015
 tags: ctf web
 date: 2015-08-20 22:00:00
+author: enrico
 ---
 
 > Category: *web* - Points: *25*
